@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script defer src="js/main.js"></script>
+    <title>CV</title>
+    <script defer src="ts/main.ts"></script>
     <link rel="stylesheet" href="scss/main.scss" />
   </head>
   <body>
@@ -18,12 +18,63 @@
           <li class="hero__navitem"><a href="#">Kontakt</a></li>
         </ul>
 
-        <div class="hero__hamburger">
-          <span class="hero__hamburgerbar"></span>
-          <span class="hero__hamburgerbar"></span>
-          <span class="hero__hamburgerbar"></span>
+        <div class="hero__hamburger" id="hamburger">
+          <span class="hero__hamburgerbar" id="bar1"></span>
+          <span class="hero__hamburgerbar" id="bar2"></span>
+          <span class="hero__hamburgerbar" id="bar3"></span>
         </div>
       </nav>
+
+      <div class="hero__text">
+        <h1 class="hero__textWelcome">Hej, välkommen hit!</h1>
+        <p class="hero__presentation">
+          Tove Boson heter jag och söker en praktikplats inom
+          Frontend-utveckling. <br />
+          Klicka dig vidare för att se mer om mig och mina projekt!
+        </p>
+      </div>
     </div>
+    <main class="about">
+      <div class="about__container">
+        <img
+          class="about__image"
+          src="images/Tove-updated.png"
+          alt="Tove Boson"
+        />
+        <h3 class="about__header">Lär känna mig!</h3>
+        <aside class="about__buttonContainer">
+          <button id="privateButton" class="about__private">Privat</button>
+          <p id="descriptionPrivate" class="about__description">
+            Jag heter Tove Boson och är 26 år, uppvuxen i Lycksele. Familjen
+            flyttade sedan till Örnsköldsvik där jag gick i skolan i tre år, för
+            att sedan på egen hand flytta till Uppsala län på grund av skola.
+            Sedan dess blev jag kvar och jag ångrar inte en sekund. Jag och min
+            kille bor i en lägenhet som vi renoverar för fullt och
+            förhoppningsvis är den klar inom kort.
+          </p>
+          <button id="careerButton" class="about__career">Karriär</button>
+          <p id="descriptionCareer" class="about__description">
+            Jag startade min karriär inom telefonförsäljning och har sedan dess
+            fortsatt inom säljbranschen i många år. Till slut kom jag till en
+            punkt där jag kände att jag inte kunde utvecklas mer och därför har
+            jag nu sökt mig vidare till något jag tror skulle passa mig bättre.
+            Formgivning och problemlösning tror jag skulle passa mig bättre, och
+            än så länge har jag inte haft fel.
+          </p>
+          <button id="educationButton" class="about__education">
+            Utbildning
+          </button>
+          <p id="descriptionEducation" class="about__description">
+            Jag hoppade på en ekonomiutbildning i Gävle direkt efter gymnasiet
+            som jag ganska snart kände att detta inte var något för mig. Jag är
+            ärlig med det och känner mer att det var en erfarenhet och att jag
+            efter det vill vara säker på om jag ska plugga något igen, då ska
+            det vara nåt jag verkligen brinner för. Och som det ser ut just nu
+            så har jag verkligen hittat det. Jag älskar att vara kreativ och att
+            få se ett resultat på det jag åstadkommit.
+          </p>
+        </aside>
+      </div>
+    </main>
   </body>
 </html>
