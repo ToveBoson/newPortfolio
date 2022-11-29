@@ -10,7 +10,7 @@
 }
 
 body {
-  height: 100%;
+  height: 100vh;
   margin: 0;
   font-family: "Poppins", sans-serif;
   background-color: #161a20;
@@ -104,6 +104,7 @@ body {
     margin: 0;
     top: 50%;
     transform: rotate(45deg);
+    transition: 0.3s ease-in-out;
   }
 
   #bar2 {
@@ -116,6 +117,7 @@ body {
     position: absolute;
     margin: 0;
     top: 50%;
+    transition: 0.3s ease-in-out;
   }
 }
 
@@ -128,7 +130,8 @@ body {
   &__image {
     width: 300px;
     height: 420px;
-    border-radius: 50%;
+    display: block;
+    margin: auto;
   }
 
   &__header {
@@ -138,24 +141,60 @@ body {
 
   &__buttonContainer {
     text-align: center;
-    display: flex;
-    justify-content: space-between;
     margin: 1em;
+    display: block;
   }
 
-  &__private,
-  &__career,
-  &__education {
+  &__button {
     color: #161a20;
     background-color: rgba(255, 255, 255, 0.995);
     padding: 1em;
     box-shadow: 10px 10px 20px black;
     border: none;
-    border-radius: 1em;
+    border-radius: 50%;
     cursor: pointer;
+    margin: 1em;
+    width: 6em;
+    height: 6em;
+  }
+
+  &__button:hover {
+    background-color: rgba(165, 158, 158, 0.699);
+    transition: all 0.3s linear;
   }
 
   &__description {
     display: none;
+    transition: all 1s ease-in-out;
+  }
+}
+
+.toggleShow {
+  display: block;
+}
+.thirdPage {
+  height: 100vh;
+}
+
+.footer {
+  height: 18em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  border-top: 3px solid grey;
+
+  &__email,
+  &__linkedin {
+    text-decoration: none;
+  }
+
+  &__linkedin {
+    padding-right: 0.5em;
+  }
+
+  i {
+    color: blue;
+    background-color: white;
   }
 }
