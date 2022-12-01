@@ -1,4 +1,5 @@
 export interface IGitRepo {
   name: string;
-  svn_url: string;
+  description: string;
+  html_url: string;
 }

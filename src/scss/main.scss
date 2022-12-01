@@ -172,8 +172,20 @@ body {
 .toggleShow {
   display: block;
 }
-.thirdPage {
+.gitRepo {
   height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &__todoButton,
+  &__assignmentButton {
+    color: black;
+    padding: 1em;
+    cursor: pointer;
+  }
 }
 
 .footer {

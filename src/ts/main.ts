@@ -1,5 +1,7 @@
 import axios from "axios";
+import { IGitRepo } from "../models/IGitRepo";
 import { IList } from "../models/IList";
+import { getList } from "./services/repoService";
 
 let firstbar: HTMLDivElement = document.getElementById(
   "hamburger"
@@ -52,19 +54,32 @@ educationButton.addEventListener("click", () => {
   descriptionPrivate.classList.remove("toggleShow");
 });
 
-axios.get("https://api.github.com/users/ToveBoson/repos").then((response) => {
-  // console.log(response.data);
+let button: HTMLButtonElement = document.getElementById(
+  "gitContainer__button"
+) as HTMLButtonElement;
+button.addEventListener("click", () => {
+  getList();
 });
 
-function createHtml(repos: IList[]) {
+export function createHtml(projects: IGitRepo[]) {
   let container: HTMLDivElement = document.getElementById(
-    "thirdPage"
+    "gitContainer"
   ) as HTMLDivElement;
 
-  for (let i = 0; i < repos.length; i++) {
+  for (let i = 0; i < projects.length; i++) {
     let title: HTMLHeadingElement = document.createElement("h3");
-    // title.innerHTML = repos[i];
+    let description: HTMLParagraphElement = document.createElement("p");
+    let url: HTMLParagraphElement = document.createElement("p");
 
-    container.appendChild(title);
+    if (!projects[i].description) {
+    } else {
+      title.innerHTML = projects[i].name;
+      description.innerHTML = projects[i].description;
+      url.innerHTML = projects[i].html_url;
+
+      container.appendChild(title);
+      container.appendChild(description);
+      container.appendChild(url);
+    }
   }
 }
