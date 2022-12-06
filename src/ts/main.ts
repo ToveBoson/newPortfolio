@@ -59,13 +59,6 @@ educationButton.addEventListener("click", () => {
   descriptionPrivate.classList.remove("toggleShow");
 });
 
-let button: HTMLButtonElement = document.getElementById(
-  "gitRepo__todoButton"
-) as HTMLButtonElement;
-button.addEventListener("click", () => {
-  getList();
-});
-
 export function createHtml(projects: IGitRepo[]) {
   let container: HTMLDivElement = document.getElementById(
     "gitRepo"
@@ -75,16 +68,21 @@ export function createHtml(projects: IGitRepo[]) {
     let title: HTMLHeadingElement = document.createElement("h3");
     let description: HTMLParagraphElement = document.createElement("p");
     let url: HTMLParagraphElement = document.createElement("p");
+    let topics: HTMLParagraphElement = document.createElement("p");
 
     if (!projects[i].description) {
     } else {
       title.innerHTML = projects[i].name;
       description.innerHTML = projects[i].description;
       url.innerHTML = projects[i].html_url;
+      topics.innerHTML = projects[i].topics;
 
       container.appendChild(title);
       container.appendChild(description);
       container.appendChild(url);
+      container.appendChild(topics);
     }
   }
 }
+
+getList();

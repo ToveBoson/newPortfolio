@@ -1,0 +1,26 @@
+.footer {
+  height: 18em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+
+  &__email,
+  &__linkedin {
+    text-decoration: none;
+  }
+
+  &__linkedin {
+    padding-right: 0.5em;
+  }
+
+  i::before {
+    color: blue;
+    background-color: white;
+    font-size: medium;
+  }
+
+  .bi-linkedin {
+    background-color: #161a20;
+  }
+}
