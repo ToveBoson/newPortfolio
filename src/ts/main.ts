@@ -1,7 +1,12 @@
-import axios from "axios";
 import { IGitRepo } from "../models/IGitRepo";
-import { IList } from "../models/IList";
 import { getList } from "./services/repoService";
+
+window.addEventListener("load", () => {
+  const loadingHero: HTMLDivElement = document.getElementById(
+    "hero__text"
+  ) as HTMLDivElement;
+  loadingHero.classList.add("loaded");
+});
 
 let firstbar: HTMLDivElement = document.getElementById(
   "hamburger"
@@ -55,7 +60,7 @@ educationButton.addEventListener("click", () => {
 });
 
 let button: HTMLButtonElement = document.getElementById(
-  "gitContainer__button"
+  "gitRepo__todoButton"
 ) as HTMLButtonElement;
 button.addEventListener("click", () => {
   getList();
@@ -63,7 +68,7 @@ button.addEventListener("click", () => {
 
 export function createHtml(projects: IGitRepo[]) {
   let container: HTMLDivElement = document.getElementById(
-    "gitContainer"
+    "gitRepo"
   ) as HTMLDivElement;
 
   for (let i = 0; i < projects.length; i++) {
