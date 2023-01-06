@@ -19,9 +19,9 @@
       <nav class="hero__navbar">
         <ul id="toggleShow" class="hero__navlist">
           <li class="hero__navitem"><a href="#">Hem</a></li>
-          <li class="hero__navitem"><a href="#">Om</a></li>
-          <li class="hero__navitem"><a href="#">Projekt</a></li>
-          <li class="hero__navitem"><a href="#">Kontakt</a></li>
+          <li class="hero__navitem"><a href="#about">Om</a></li>
+          <li class="hero__navitem"><a href="#gitRepo">Projekt</a></li>
+          <li class="hero__navitem"><a href="#footer">Kontakt</a></li>
         </ul>
 
         <div class="hero__hamburger" id="hamburger">
@@ -88,9 +88,9 @@
 
     <!-- GIT REPO PRESENTATION -->
 
-    <div class="gitRepo" id="gitRepo">
-      <h3>Mina Projekt</h3>
-      <p>
+    <div id="gitRepo">
+      <h3 id="repoTitle">Mina Projekt</h3>
+      <p id="repoDescription">
         Nedan hittar ni mina projekt jag hittills har gjort under min
         utbildning.
       </p>
@@ -105,14 +105,18 @@
         <p>753 30 Uppsala</p>
       </div>
       <div>
-        <a class="footer__email" href="mailto:bboson@live.se"
-          ><em>Kontakta mig</em></a
-        >
+        <a class="footer__email" href="mailto:bboson@live.se">bboson@live.se</a>
         <p>076-105 05 94</p>
       </div>
       <div>
         <a class="footer__linkedin" href=""><i class="bi bi-linkedin"></i></a
         >LinkedIn
+      </div>
+
+      <div class="footer__pdf">
+        <a class="footer__pdf__link" href="/src/components/ToveBoson-CV.pdf"
+          ><i class="bi bi-filetype-pdf icon"></i>CV</a
+        >
       </div>
     </footer>
   </body>

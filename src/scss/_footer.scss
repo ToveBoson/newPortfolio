@@ -1,9 +1,21 @@
+@use "mixins" as m;
+
 .footer {
-  height: 18em;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
+  border-top: 1px dotted white;
+
+  @include m.large {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 30vh;
+    text-align: left;
+  }
 
   &__email,
   &__linkedin {
@@ -14,13 +26,14 @@
     padding-right: 0.5em;
   }
 
-  i::before {
-    color: blue;
-    background-color: white;
-    font-size: medium;
-  }
+  &__pdf {
+    &__link {
+      text-decoration: none;
+      padding-right: 0.5em;
+    }
 
-  .bi-linkedin {
-    background-color: #161a20;
+    :hover {
+      text-decoration: underline;
+    }
   }
 }

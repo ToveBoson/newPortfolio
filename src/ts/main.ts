@@ -60,15 +60,23 @@ educationButton.addEventListener("click", () => {
 });
 
 export function createHtml(projects: IGitRepo[]) {
-  let container: HTMLDivElement = document.getElementById(
+  const gitContainer: HTMLDivElement = document.getElementById(
     "gitRepo"
   ) as HTMLDivElement;
+  const gitProjectTitle: HTMLHeadingElement = document.getElementById(
+    "repoTitle"
+  ) as HTMLHeadingElement;
+  const gitrepoDescription: HTMLParagraphElement = document.getElementById(
+    "repoDescription"
+  ) as HTMLParagraphElement;
 
   for (let i = 0; i < projects.length; i++) {
     let title: HTMLHeadingElement = document.createElement("h3");
     let description: HTMLParagraphElement = document.createElement("p");
+    let urlButton: HTMLButtonElement = document.createElement("button");
     let url: HTMLParagraphElement = document.createElement("p");
     let topics: HTMLParagraphElement = document.createElement("p");
+    let container: HTMLDivElement = document.createElement("div");
 
     if (!projects[i].description) {
     } else {
@@ -76,11 +84,25 @@ export function createHtml(projects: IGitRepo[]) {
       description.innerHTML = projects[i].description;
       url.innerHTML = projects[i].html_url;
       topics.innerHTML = projects[i].topics;
+      urlButton.innerHTML = "Klicka här";
 
-      container.appendChild(title);
-      container.appendChild(description);
-      container.appendChild(url);
-      container.appendChild(topics);
+      container.append(title);
+      container.append(description);
+      container.append(urlButton);
+      urlButton.append(url);
+      container.append(topics);
+
+      gitContainer.classList.add("git-container");
+      gitProjectTitle.classList.add("git-container__project-title");
+      gitrepoDescription.classList.add("git-container__repo-description");
+      container.classList.add("git-container__box");
+      title.classList.add("git-container__box__header");
+      description.classList.add("git-container__box__description");
+      url.classList.add("git-container__box__url");
+      urlButton.classList.add("git-container__box__button");
+      topics.classList.add("git-container__box__topics");
+
+      gitContainer.append(container);
     }
   }
 }

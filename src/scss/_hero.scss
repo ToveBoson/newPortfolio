@@ -14,7 +14,7 @@
     display: none;
     margin-top: 10%;
 
-    @include m.desktop {
+    @include m.large {
       display: flex;
       margin-top: 0;
     }
@@ -26,7 +26,7 @@
     justify-content: center;
     align-items: center;
 
-    @include m.desktop {
+    @include m.large {
       display: flex;
       align-items: flex-end;
     }
@@ -36,7 +36,7 @@
     padding: 0.5em;
     text-align: center;
 
-    @include m.desktop {
+    @include m.large {
       margin: 1em;
     }
   }
@@ -57,7 +57,7 @@
     right: 2em;
     top: 2em;
 
-    @include m.desktop {
+    @include m.large {
       display: none;
     }
   }

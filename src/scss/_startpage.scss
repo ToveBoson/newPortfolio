@@ -5,12 +5,16 @@
   scroll-behavior: smooth;
   color: white;
   scroll-behavior: smooth;
+  text-shadow: 2px 0 10px black;
+}
+
+* ::-webkit-scrollbar {
+  display: none;
 }
 
 body {
-  height: 100vh;
   font-family: "Poppins", sans-serif;
-  background-color: #161a20;
+  background-color: #2a2e34;
 }
 
 .loaded {
